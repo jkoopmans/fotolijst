@@ -4,8 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fotolijst</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: #e74c3c;
+      transition: background-color 1.2s ease;
+    }
+  </style>
 </head>
 <body>
   <h1>Hello World!</h1>
+
+  <script>
+    function changeBackgroundColor() {
+      const hue = Math.floor(Math.random() * 360);
+      const saturation = 65 + Math.floor(Math.random() * 25);
+      const lightness = 40 + Math.floor(Math.random() * 20);
+      document.body.style.backgroundColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+    }
+
+    changeBackgroundColor();
+    setInterval(changeBackgroundColor, 2000);
+  </script>
 </body>
 </html>
